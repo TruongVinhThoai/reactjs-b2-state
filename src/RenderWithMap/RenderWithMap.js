@@ -9,7 +9,10 @@ export default class RenderWithMap extends Component {
           <img className="card-img-top" src={url} />
           <div className="card-body">
             <h6 className="card-title">{name}</h6>
-            {/* <p className="card-text">{moTa}</p> */}
+            <p className="card-text">{moTa}</p>
+            <p className="card-text">{moTa}</p>
+            <p className="card-text">{moTa}</p>
+            <p className="card-text">{moTa}</p>
           </div>
         </div>
       );
