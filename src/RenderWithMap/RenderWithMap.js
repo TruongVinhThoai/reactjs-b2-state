@@ -2,23 +2,27 @@ import React, { Component } from "react";
 import { glassesArr } from "./Data";
 
 export default class RenderWithMap extends Component {
-  state = { glasses: "", name: "", desc: "" };
-  handleGlasses = () => {
-    this.setState({
-      name: (this.state.name = "vinhthoai"),
-    });
-  };
   renderListGlasses = () => {
-    return glassesArr.map(({ url, name }, index) => {
+    return glassesArr.map((item, index) => {
       return (
         <div key={index} className="card text-left col-2 m-3 py-4">
-          <button onClick={this.handleGlasses}>
-            <img className="card-img-top" src={url} />
+          <button
+            onClick={() => {
+              return {
+                id: item.id,
+                glasses: item.url,
+                name: item.name,
+                desc: item.desc,
+              };
+            }}
+          >
+            <img className="card-img-top" src={item.url} />
           </button>
         </div>
       );
     });
   };
+
   render() {
     return (
       <div className="container">
