@@ -8,12 +8,7 @@ export default class RenderWithMap extends Component {
         <div key={index} className="card text-left col-2 m-3 py-4">
           <button
             onClick={() => {
-              return {
-                id: item.id,
-                glasses: item.url,
-                name: item.name,
-                desc: item.desc,
-              };
+              this.props.handleChange(item);
             }}
           >
             <img className="card-img-top" src={item.url} />
@@ -26,9 +21,6 @@ export default class RenderWithMap extends Component {
   render() {
     return (
       <div className="container">
-        <div className="py-5">
-          <img style={{ width: `400px` }} src="./img/model.jpg" />
-        </div>
         <div className="row">{this.renderListGlasses()}</div>
       </div>
     );

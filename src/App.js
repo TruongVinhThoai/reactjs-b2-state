@@ -5,16 +5,7 @@ import GlassesState from "./GlassesState/GlassesState";
 
 function App() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(./img/background.jpg)`,
-        backgroundSize: `cover`,
-        height: `100%`,
-        backgroundPosition: `center`,
-      }}
-      className="App"
-    >
-      <RenderWithMap />
+    <div className="App">
       <GlassesState />
     </div>
   );
